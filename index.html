@@ -49,7 +49,7 @@
 <body>
     <div class="login-container">
         <h2>SEMISTER 3-1 Results</h2>
-        <form action="https://sdes-college.github.io/submit/" method="GET">
+        <form id="loginForm">
             <input type="text" name="rollnumber" placeholder="Enter Roll Number" required>
             <input type="text" name="apaaraid" placeholder="Enter Apaara ID" required>
             <select name="branch" required>
@@ -59,8 +59,20 @@
                 <option value="CSIT">CSIT</option>
                 <option value="CSBS">CSBS</option>
             </select>
-            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn" onclick="redirectToSubmitPage()">Submit</button>
         </form>
     </div>
+
+    <script>
+        function redirectToSubmitPage() {
+            // You can get form values if needed here
+            // const rollnumber = document.querySelector('input[name="rollnumber"]').value;
+            // const apaaraid = document.querySelector('input[name="apaaraid"]').value;
+            // const branch = document.querySelector('select[name="branch"]').value;
+            
+            // Redirect to the desired URL
+            window.location.href = "https://sdes-college.github.io/submit/";
+        }
+    </script>
 </body>
 </html>
